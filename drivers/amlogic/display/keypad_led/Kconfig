@@ -1,0 +1,17 @@
+
+menu "Jabil Keypad LED Support"
+
+config JABIL_KEYPADLED
+	bool "Jabil keypad led support"
+	default y
+	help
+		Say Y here if you want to use the Jabil keypad led management.
+
+config JBL_KEYPAD_LED_SUPPORT
+	tristate "JBL keypad led support"
+	default y
+	depends on JABIL_KEYPADLED
+	help
+		JBL keypad led support
+
+endmenu
